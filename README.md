@@ -30,7 +30,7 @@ Then run the following commands:
 
     bundle install
     
-    rails generate spine-extensions:install
+    bundle exec rails generate spine_extensions:install
 
 ## License
 

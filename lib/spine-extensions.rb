@@ -1,2 +1,2 @@
-require 'spine-extensions/version'
-require 'spine-extensions/engine'
+require 'spine_extensions/version'
+require 'spine_extensions/engine'
