@@ -13,6 +13,29 @@ Currently it includes:
 
 - `@view 'show'`  = `JST['app/views/posts/show']`
 - `@generate 'show', post` = `JST['app/views/posts/show'](post)`
+- `@htmlify 'show', post` = `@html JST['app/views/posts/show'](post)`
+
+Examples:
+
+```coffee
+class App.Users extends Spine.Controller
+  elements:
+    'form': 'form',
+    # You would need elements for the inputs without the helpers:
+    'input[name='email']: 'email_input',
+    'input[name='name']: 'name_input'
+
+  render: -> @htmlify 'edit', @model
+
+  renderWithNoHelpers: ->
+    @html JST['app/views/posts/show'](@model)
+
+  updateModelFromForm: ->
+    @model.updateAttributes @form.serializeForm()
+  
+  updateModeFromFormWithNoHelpers: ->
+    @model.updateAttributes { email: email_input.val(), name: name_input.val() }
+```
 
 ### jQuery Extensions:
 

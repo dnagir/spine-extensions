@@ -17,4 +17,6 @@ Spine.Controller.include
 
   generate: (name, data) -> @view(name)(data)
 
+  htmlify: (name, data) -> @html @generate(name, data)
+
  
