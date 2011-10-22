@@ -14,6 +14,13 @@ Currently it includes:
 - `@view 'show'`  = `JST['app/views/posts/show']`
 - `@generate 'show', post` = `JST['app/views/posts/show'](post)`
 
+### jQuery Extensions:
+
+- `jQuery.serializeForm` - converts form inputs into JSON object (`<input name='email' value='me@example.com'>` becomes `{email: 'me@example.com'}`).
+
+### TODO List:
+- Testing helpers: Model.FakeAjax, Simpler JST access, Factories
+
 ## Setup
 
 This gem requires [spine-rails](https://github.com/maccman/spine-rails).

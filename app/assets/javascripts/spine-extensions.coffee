@@ -1,5 +1,13 @@
  #= require spine
- 
+
+# jQuery form serializer
+if jQuery
+  jQuery.fn.serializeForm = ->
+    result = {}
+    for item in jQuery(@).serializeArray()
+      result[item.name] = item.value
+    result
+
 # Controller view rendering helpers
 Spine.Controller.include
   view: (name) ->
